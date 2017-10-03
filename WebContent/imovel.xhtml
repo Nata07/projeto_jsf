@@ -9,10 +9,23 @@
     </h:head>
  <h:body>
  	
- 	<h:form>
- 		<h:inputText class = "form-control input-md"/>
- 		<h:commandButton value="Gravar" class="btn btn-info"/>
- 	</h:form>
+<!--  	<h:form> -->
+<!--  		<h:inputText class = "form-control input-md"/> -->
+<!--  		<h:commandButton value="Gravar" class="btn btn-info"/> -->
+<!--  	</h:form> -->
+
+	<h:form>
+		<fieldset>
+			<legend>Area do cliente</legend>
+			<h:panelGrid columns="2">
+				<h:outputLabel value="Usuario" for="nome" />
+				<h:inputText id="usuario" value="#{autorBean.autor.nome}" />
+				<h:outputLabel value="Senha" for="nome" />
+				<h:inputText id="senha" value="#{autorBean.autor.nome}" />
+				<h:commandButton value="Gravar" action="#{autorBean.gravar}" />
+			</h:panelGrid>
+		</fieldset>
+	</h:form>
  	
  </h:body>		
 

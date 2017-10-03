@@ -2,8 +2,9 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml"
 	xmlns:h="http://java.sun.com/jsf/html"
-	xmlns:pt="http://xmlns.jcp.org/jsf/passthrough">
-<h:head>
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:p="http://primefaces.org/ui">
+<h:head> 
 
 	<title>MyShared - Post your files!</title>
 	<link rel="stylesheet" type="text/css" href="css/bootstrap.css"/>
@@ -24,10 +25,14 @@
 			<h:outputLabel value="Email " for="email" />
 			<h:inputText type="email" id="email" class="form-control" placeholder="Email address" /> 
 			<h:outputLabel value="Senha " for="senha" />
-			<h:inputText type="password" id="senha" class="form-control" pt:placeholder="Password"/>
+			<h:inputText type="password" id="senha" class="form-control" />
 						<h:commandButton class="btn btn-lg btn-primary btn-block btn-signin"
 							type="submit" value = "Login"/>
 							
+							<h:outputText value="Feedback: " />
+       
+    	<p:growl id="msgs" showDetail="true" /><font></font>
+		
 			</h:form>
 			<!-- /form -->
 		</div>
