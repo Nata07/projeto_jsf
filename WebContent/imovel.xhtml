@@ -1,18 +1,28 @@
 <?xml version="1.0" encoding="ISO-8859-1" ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml"
-		xmlns:h="http://java.sun.com/jsf/html">
+		xmlns:h="http://java.sun.com/jsf/html"
+		xmlns:p="http://primefaces.org/ui">
 		
  <h:head>
         <title>MyShared - Post your files!</title>
         <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
     </h:head>
  <h:body>
- 	
- 	<h:form>
- 		<h:inputText class = "form-control input-md"/>
- 		<h:commandButton value="Gravar" class="btn btn-info"/>
- 	</h:form>
+ <p:menubar>
+ 
+ </p:menubar>
+ 	<p:spinner />
+ 	<p:layout fullPage="true">
+    <p:layoutUnit position="top" height="50">
+    </p:layoutUnit>
+    <p:layoutUnit position="left" width="180" header="Menu" collapsible="true" >
+    </p:layoutUnit>
+    <p:layoutUnit position="center" header="Sistema">
+    </p:layoutUnit>
+</p:layout>
+
+<h:inputText></h:inputText>
  	
  </h:body>		
 
