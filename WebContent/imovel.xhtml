@@ -1,11 +1,13 @@
 <?xml version="1.0" encoding="ISO-8859-1" ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml"
-		xmlns:h="http://java.sun.com/jsf/html">
+		xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:p="http://primefaces.org/ui">
 		
  <h:head>
         <title>MyShared - Post your files!</title>
-        <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
+      
     </h:head>
  <h:body>
  	
@@ -23,9 +25,21 @@
 				<h:outputLabel value="Senha" for="nome" />
 				<h:inputText id="senha" value="#{autorBean.autor.nome}" />
 				<h:commandButton value="Gravar" action="#{autorBean.gravar}" />
+				
+				<p:inputText></p:inputText>
+				
+				
 			</h:panelGrid>
 		</fieldset>
 	</h:form>
+	
+	<p:stack icon="data:image/png;base64,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" expanded="true">
+	    <p:menuitem value="Home" icon="https://cdn0.iconfinder.com/data/icons/outline-documents/128/kden-light-document-img-128.png" url="http://www.google.com"/>
+	    <p:menuitem value="Music" icon="https://cdn0.iconfinder.com/data/icons/outline-documents/128/kden-light-document-img-128.png" url="#"/>
+	    <p:menuitem value="Video" icon="https://cdn0.iconfinder.com/data/icons/outline-documents/128/kden-light-document-img-128.png" url="#"/>
+	    <p:menuitem value="Email" icon="https://cdn0.iconfinder.com/data/icons/outline-documents/128/kden-light-document-img-128.png" url="#"/>
+	    <p:menuitem value="Portfolio" icon="https://cdn0.iconfinder.com/data/icons/outline-documents/128/kden-light-document-img-128.png" url="#"/>
+	</p:stack>
  	
  </h:body>		
 
