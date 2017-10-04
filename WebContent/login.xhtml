@@ -12,30 +12,25 @@
 
 </h:head>
 <h:body>
- 
 	<div class="container">
 		<div class="card card-container">
-			<img id="profile-img" class="profile-img-card"
-				src="//ssl.gstatic.com/accounts/ui/avatar_2x.png" />
-			<p id="profile-name" class="profile-name-card"></p>
-			<h:form class="form-signin">
-			<span id="reauth-email" class="reauth-email"></span> 
-			<h:outputLabel value="Email " for="email" />
-			<h:inputText type="email" id="email" class="form-control" placeholder="Email address" /> 
-			<h:outputLabel value="Senha " for="senha" />
-			<h:inputText type="password" id="senha" class="form-control" />
-						<h:commandButton class="btn btn-lg btn-primary btn-block btn-signin"
-							type="submit" value = "Login"/>
-							
-							<h:outputText value="Feedback: " />
-       
-    	<p:growl id="msgs" showDetail="true" /><font></font>
-		<p:panelGrid columns="2">
-			<p:inputText />
-			
-			<p:calendar />
-		</p:panelGrid>
-			</h:form>
+<!-- 			<img id="profile-img" class="profile-img-card" -->
+<!-- 				src="//ssl.gstatic.com/accounts/ui/avatar_2x.png" /> -->
+<!-- 			<p id="profile-name" class="profile-name-card"></p> -->
+			<div class="text-center">
+				<h:graphicImage value="/img/img_logo.png"></h:graphicImage>
+			</div>
+			<div class="fomularioLogin">
+				<h:form class="form-signin">
+				<span id="reauth-email" class="reauth-email"></span> 
+				<p:inputText id="email" p:placeholder="Email Address" 
+								value="#{watermarkView.keyword}"  required="true" label="email" />
+				<p:password id="senha" p:placeholder="Password" 
+									value="#{passwordView.password}" feedback="true" label="senha"/>
+				<h:commandButton class="btn btn-lg btn-primary btn-block btn-signin"
+								type="submit" value = "Login"/>
+				</h:form>
+			</div>
 			<!-- /form -->
 		</div>
 		<!-- /card-container -->
