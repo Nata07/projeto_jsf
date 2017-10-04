@@ -19,21 +19,22 @@
 			<div class="text-center">
 				<h:graphicImage value="/img/img_logo.png"></h:graphicImage>
 			</div>
+			
 			<div class="fomularioLogin">
+				<p:messages/>
 				<h:form class="form-signin">
 				<span id="reauth-email" class="reauth-email"></span> 
 				<p:inputText id="email" p:placeholder="Email Address" 
-								value="#{watermarkView.keyword}"  required="true" label="email" />
+								value="#{userBean.user.usuario}"  required="true" />
 				<p:password id="senha" p:placeholder="Password" 
-									value="#{passwordView.password}" feedback="true" label="senha"/>
+									value="#{userBean.user.senha}"/>
+									<h:message for="email" id="messageEmail"/>
 				<h:commandButton class="btn btn-lg btn-primary btn-block btn-signin"
-								type="submit" value = "Login"/>
-				</h:form>
+								type="submit" value = "Login" action="#{userBean.validLogin}"/>
+				</h:form> 
+				
 			</div>
-			<!-- /form -->
 		</div>
-		<!-- /card-container -->
 	</div>
-	<!-- /container -->
 </h:body>
 </html>
