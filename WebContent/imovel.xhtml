@@ -1,29 +1,37 @@
-<?xml version="1.0" encoding="ISO-8859-1" ?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml"
-		xmlns:h="http://java.sun.com/jsf/html"
-		xmlns:p="http://primefaces.org/ui">
-		
- <h:head>
-        <title>MyShared - Post your files!</title>
-        <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
-    </h:head>
- <h:body>
- <p:menubar>
- 
- </p:menubar>
- 	<p:spinner />
- 	<p:layout fullPage="true">
-    <p:layoutUnit position="top" height="50">
-    </p:layoutUnit>
-    <p:layoutUnit position="left" width="180" header="Menu" collapsible="true" >
-    </p:layoutUnit>
-    <p:layoutUnit position="center" header="Sistema">
-    </p:layoutUnit>
-</p:layout>
-
-<h:inputText></h:inputText>
- 	
- </h:body>		
-
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:p="http://primefaces.prime.com.tr/ui">
+<h:head>
+</h:head>
+<h:body>
+	<h1>Teste</h1>
+	<h:form>
+		<p:panel header="Cadastro de Usuário">
+			<h:panelGrid columns="2" cellpadding="5">
+				<h:outputText value="Login: " />  
+            	<p:keyboard value="#{usuarioBean.login}" />  
+				<h:outputText value="Senha: " />  
+            	<p:password value="#{usuarioBean.senha}"  
+                    password="true" feedback="true" required="true" />  
+				<h:outputText value="Email: " />  
+            	<p:keyboard value="#{usuarioBean.email}"  />  								
+				<h:outputText value="Nome Completo: " />  
+            	<p:keyboard value="#{usuarioBean.nome}"   />  
+            	<h:outputText value="Endereco: " />  
+            	<p:keyboard value="#{usuarioBean.endereco}"   /> 
+				<h:outputText value="Data de Nascimento: " />
+				<p:inputMask value="#{usuarioBean.dataNascimento}" mask="99/99/9999" />
+				<h:outputText value="Telefone: " />
+				<p:inputMask value="#{usuarioBean.telefone}" mask="(99) 999-9999"  />
+				<p:commandButton value="Limpar" type="reset" />
+				<p:commandButton value="Enviar" action="#{usuarioBean.salvar}"			  
+				 type="Submit"   />
+			</h:panelGrid>
+		</p:panel>				   
+	</h:form>
+</h:body>
 </html>

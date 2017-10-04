@@ -1,18 +1,22 @@
-/*
- * Specific styles of signin component
- */
-/*
- * General styles
- */
 body, html {
     height: 100%;
     background-repeat: no-repeat;
-    background-image: linear-gradient(rgb(104, 145, 162), rgb(12, 97, 33));
+/*     background-image: linear-gradient(rgb(104, 145, 162), rgb(12, 97, 33)); */
+
 }
 
 .card-container.card {
     max-width: 350px;
     padding: 40px 40px;
+}
+
+.fomularioLogin{
+	padding: 20px;
+	text-align: center;
+}
+
+.fomularioLogin input{
+	text-align: center;
 }
 
 .btn {
@@ -32,7 +36,7 @@ body, html {
     /* just in case there no content*/
     padding: 20px 25px 30px;
     margin: 0 auto 25px;
-    margin-top: 50px;
+    margin-top: 120px;
     /* shadows and rounded borders */
     -moz-border-radius: 2px;
     -webkit-border-radius: 2px;
@@ -127,7 +131,7 @@ body, html {
 .btn.btn-signin:hover,
 .btn.btn-signin:active,
 .btn.btn-signin:focus {
-    background-color: rgb(12, 97, 33);
+    background-color: rgb(79, 107, 121);
 }
 
 .forgot-password {
